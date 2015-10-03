@@ -3,22 +3,17 @@ var Router = require('react-router');
 var Link = Router.Link;
 var RouteHandler = Router.RouteHandler;
 
+var Navbar = require('./components/Navbar');
+
 var App = React.createClass({
   render: function() {
     return (
       <div>
-        <div id="navbar">
-          <nav className="navbar navbar-default">
-            <div className="container-fluid">
-              <div className="navbar-header">
-                <Link className="btn btn-primary btn-simple" to="app" role="button">Home</Link>
-                <RouteHandler />
-              </div>
-            </div>
-          </nav>
+        <div>
+          <Navbar />
         </div>
         <div>
-          <div>Hello There!</div>
+          <div>Hello Thar!</div>
         </div>
       </div>
     )
