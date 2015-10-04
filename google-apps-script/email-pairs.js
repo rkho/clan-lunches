@@ -1,5 +1,4 @@
 function groupPairs() {
-  var pairCol = 'Wk2 pair'
   var pairedUsers = getUsers().filter(function (user) {
     var pair = user[pairCol]
     return pair && pair !== 'NA'

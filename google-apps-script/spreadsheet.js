@@ -1,7 +1,8 @@
 var spreadsheet = SpreadsheetApp.getActiveSpreadsheet()
 
 var usersSheet = spreadsheet.getSheetByName('Users')
-var responseSheet = spreadsheet.getSheetByName('wk2 responses')
+var responseSheet = spreadsheet.getSheetByName('wk3 responses')
+var pairCol = 'Wk3 pair'
 
 var getData = _.memoize(function () {
   return usersSheet.getDataRange().getValues()

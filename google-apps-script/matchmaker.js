@@ -106,13 +106,13 @@ function assignAllPairs() {
 }
 
 function savePairs() {
-  var pairCol = getColHeaders().indexOf('Wk2 pair') + 1
+  var pairColIndex = getColHeaders().indexOf(pairCol) + 1
 
   _.each(assignAllPairs(), function (pairKey, userKey) {
     var row = _.findIndex(getUsers(), function (user) {
       return user.Key === userKey
     }) + 2
-    usersSheet.getRange(row, pairCol).setNumberFormat('@') // set to plain text to avoid auto-conversion
+    usersSheet.getRange(row, pairColIndex).setNumberFormat('@') // set to plain text to avoid auto-conversion
       .setValue(pairKey.toString())
   })
 
