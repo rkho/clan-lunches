@@ -1,20 +1,15 @@
 var React = require('react');
 var Router = require('react-router');
-var Link = Router.Link;
-var RouteHandler = Router.RouteHandler;
 
+var LandingPage = require('./components/LandingPage');
 var Navbar = require('./components/Navbar');
 
 var App = React.createClass({
   render: function() {
     return (
       <div>
-        <div>
-          <Navbar />
-        </div>
-        <div>
-          <div>Hello Thar!</div>
-        </div>
+        <Navbar />
+        <LandingPage />
       </div>
     )
   }
