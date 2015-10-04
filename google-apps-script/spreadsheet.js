@@ -25,3 +25,4 @@ var emailCol = "What's your email?"
 var addressCol = "What's your office address? (Include city)"
 var maxDistanceCol = 'How far are you willing to travel?'
 var daysCol = 'What days are you available next week?'
+var editCol = 'Edit Url'

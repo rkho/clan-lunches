@@ -10,7 +10,7 @@ function getPrefilledUrlForApiKey() {
 
   // Prefill the API Key question
   var keyResponse = items[0].asTextItem().createResponse('API_KEY')
-  
+
   // Prefill the Name question
   var nameResponse = items[1].asTextItem().createResponse('NAME_FIELD')
 
@@ -40,8 +40,9 @@ function sendForm(user) {
     'Please say when you\'re available by filling this out (by Thursday EOD): ',
     link,
     '',
-    'This link is unique for you only, do not share it!',
+    'This link is unique for you only, don\'t share it!',
     '',
+    'You can edit your office address here: ' + user[editCol],
     //'------------------------------------',
     //'',
     //'Also please check that this is the correct location for the office address you gave:',
@@ -52,8 +53,8 @@ function sendForm(user) {
     'Cheers,',
     '— David'
   ].join('\n')
-  
-  GmailApp.sendEmail(email, 'Pick your HR Clan 1-on-1 Lunch preferences', body, {name: 'David Ernst', from: adminEmail})
+
+  GmailApp.sendEmail(email, 'Pick your HR Clan Lunch preferences', body, {name: 'David Ernst', from: adminEmail})
 }
 
 function testSendForm() {
@@ -62,7 +63,7 @@ function testSendForm() {
 
 function sendFormToAll() {
   var input = Browser.msgBox('WARNING: This will send an email to all users.', Browser.Buttons.OK_CANCEL);
-  
+
   if (input === 'ok') {
     getUsers().forEach(function (user) {
       sendForm(user);
