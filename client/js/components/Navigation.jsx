@@ -3,19 +3,21 @@ var Router = require('react-router');
 var Link = Router.Link;
 var RouteHandler = Router.RouteHandler;
 
-var Navbar = React.createClass({
+var Navbar = require('react-bootstrap').Navbar
+
+var Navigation = React.createClass({
   render: function() {
     return(
-      <nav className="navbar navbar-default">
+      <Navbar>
         <div className="container">
           <div className="navbar-header">
             <Link className="navbar-brand" to="app">Clan Lunches</Link>
             <RouteHandler />
           </div>
         </div>
-      </nav>
+      </Navbar>
     )
   }
 })
 
-module.exports = Navbar;
+module.exports = Navigation;

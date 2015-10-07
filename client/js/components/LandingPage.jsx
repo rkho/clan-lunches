@@ -1,6 +1,7 @@
 var React = require('react');
 
 var LandingText = require('./LandingText');
+var LearnMore = require('./LearnMore');
 
 var LandingPage = React.createClass({
   render: function() {
