@@ -1,8 +1,7 @@
 function groupPairs() {
-  var pairCol = 'Wk2 pair'
   var pairedUsers = getUsers().filter(function (user) {
     var pair = user[pairCol]
-    return pair && pair !== 'NA'// && pair !== 'No response'
+    return pair && pair !== 'NA'
   })
 
   var usersMap = _.indexBy(pairedUsers, 'Key')
@@ -29,7 +28,7 @@ function groupPairs() {
 function getPairDays(pair) {
   var responses = _.indexBy(getResponses(), 'Private ID Key')
   var days = pair.map(function(user) {
-    return responses[user.Key][daysCol].split(', ')//.filter(function(day) {return day !== 'Monday'})
+    return responses[user.Key][daysCol].split(', ')
   })
   return intersection(days[0], days[1])
 }
