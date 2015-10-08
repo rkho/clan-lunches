@@ -1,11 +1,9 @@
-var React = require('react');
-var Router = require('react-router');
-var RouteHandler = Router.RouteHandler;
+import React from 'react';
+import { Router, RouteHandler } from 'react-router';
+import Navigation from './components/Navigation';
 
-var Navigation = require('./components/Navigation');
-
-var App = React.createClass({
-  render: function() {
+class App extends React.Component {
+  render() {
     return (
       <div>
         <Navigation />
@@ -13,6 +11,6 @@ var App = React.createClass({
       </div>
     )
   }
-});
+}
 
-module.exports = App;
+export default App;

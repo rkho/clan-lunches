@@ -1,10 +1,9 @@
-var React = require('react');
-var Router = require ('react-router');
+import React from 'react';
+import Router from 'react-router';
+import routes from './routes';
 
-var routes = require('./routes');
-
-require('../css/ct-paper.css');
-require('../css/styles.css');
+import '../css/ct-paper.css';
+import '../css/styles.css';
 
 Router.run(routes, function(Handler) {
   React.render(<Handler/>, document.body);

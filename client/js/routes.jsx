@@ -1,12 +1,10 @@
-var React = require('react');
-var Router = require ('react-router');
-var Route = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
+import React from 'react';
+import { Router, Route, DefaultRoute } from 'react-router';
 
-var App = require('./App');
-var EditProfile = require('./components/EditProfile');
-var LandingPage = require('./components/LandingPage');
-var Registration = require('./components/Registration');
+import App from './App';
+import EditProfile from './components/EditProfile';
+import LandingPage from './components/LandingPage';
+import Registration from './components/Registration';
 
 var routes = (
     <Route name="app" path="/" handler={ App }>
@@ -16,4 +14,4 @@ var routes = (
     </Route>
 )
 
-module.exports = routes;
+export default routes;

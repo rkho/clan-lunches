@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var AlertBanner = React.createClass({
+class AlertBanner extends React.Component{
   render: function() {
     return (
       <div className="alert alert-info">
@@ -10,6 +10,6 @@ var AlertBanner = React.createClass({
       </div>
     )
   }
-})
+}
 
-module.exports = AlertBanner;
+export default AlertBanner;

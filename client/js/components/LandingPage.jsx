@@ -1,10 +1,10 @@
-var React = require('react');
+import React from 'react';
 
-var LandingText = require('./LandingText');
-var LearnMore = require('./LearnMore');
+import LandingText from './LandingText';
+import LearnMore from './LearnMore';
 
-var LandingPage = React.createClass({
-  render: function() {
+class LandingPage extends React.Component{
+  render() {
     return (
       <div>
         <div className="wrapper">
@@ -22,6 +22,6 @@ var LandingPage = React.createClass({
       </div>
     )
   }
-})
+}
 
-module.exports = LandingPage;
+export default LandingPage;

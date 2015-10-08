@@ -1,13 +1,14 @@
-var React = require('react');
+import React from 'react';
 
-var Input = require('react-bootstrap').Input;
+import { Input } from 'react-bootstrap';
 
-var EditProfile = React.createClass({
-  render: function() {
+class EditProfile extends React.Component{
+  render() {
     return(
       <div>
         <div className="col-md-6 col-md-offset-3">
         <h2>Edit Profile</h2>
+        <p>Change your email, office address, bio, etc.</p>
         <form>
           <Input type="text" value="First Name" disabled="true" />
           <Input type="text" value="Last Name" disabled="true" />
@@ -24,6 +25,6 @@ var EditProfile = React.createClass({
       </div>
     )
   }
-})
+}
 
-module.exports = EditProfile;
+export default EditProfile;
