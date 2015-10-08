@@ -1,7 +1,7 @@
 var React = require('react');
 var Router = require('react-router');
+var RouteHandler = Router.RouteHandler;
 
-var LandingPage = require('./components/LandingPage');
 var Navigation = require('./components/Navigation');
 
 var App = React.createClass({
@@ -9,7 +9,7 @@ var App = React.createClass({
     return (
       <div>
         <Navigation />
-        <LandingPage />
+        <RouteHandler />
       </div>
     )
   }
