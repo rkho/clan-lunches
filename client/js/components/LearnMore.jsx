@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var LearnMore = React.createClass({
-  render: function() {
+class LearnMore extends React.Component{
+  render() {
     return (
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -22,6 +22,6 @@ var LearnMore = React.createClass({
       </div>
     )
   }
-})
+}
 
-module.exports = LearnMore;
+export default LearnMore;

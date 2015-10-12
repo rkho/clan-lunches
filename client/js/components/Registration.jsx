@@ -20,7 +20,7 @@ class Registration extends React.Component{
             <option value="onsite">On-Site</option>
             <option value="remote">Remote</option>
           </Input>
-          <Input type="number" placeholder="Cohort Number" addonBefore="HR" maxlength="2" />
+          <Input type="number" placeholder="Cohort Number" addonBefore="HR" maxLength="2" />
           <Input type="text" placeholder="What's your work address?" />
           <Input type="textarea" placeholder="What programming-related topics are you passionate about?" />
           <Input type="textarea" placeholder="What do you like to do outside of work?" />

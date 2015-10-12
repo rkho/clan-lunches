@@ -1,26 +1,24 @@
-var React = require('react');
-var Router = require('react-router');
-var Link = Router.Link;
-var RouteHandler = Router.RouteHandler;
+import React from 'react';
+import { Router, Link, RouteHandler } from 'react-router';
 
-var Navbar = require('react-bootstrap').Navbar;
-var Nav = require('react-bootstrap').Nav;
-var NavItem = require('react-bootstrap').NavItem;
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
-var Navigation = React.createClass({
-  render: function() {
+class Navigation extends React.Component{
+  render() {
     return(
       <Navbar>
         <div className="container">
           <div className="navbar-header">
             <Link className="navbar-brand" to="app">Clan Lunch</Link>
+          </div>
+          <Nav right>
             <Link className="navbar-brand" to="edit">Edit Profile</Link>
             <Link className="navbar-brand" to="register">Create Account</Link>
-          </div>
+          </Nav>
         </div>
       </Navbar>
     )
   }
-})
+}
 
-module.exports = Navigation;
+export default Navigation;
